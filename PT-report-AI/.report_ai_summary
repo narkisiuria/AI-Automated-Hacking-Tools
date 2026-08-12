@@ -1,0 +1,2 @@
+
+The initial penetration test revealed two open network services on the target host: **Microsoft Windows RPC (Port 135)** and **Microsoft Directory Services/SMB (Port 445)**. Both services are indicative of a Windows environment and may present security risks if misconfigured or unpatched. No vulnerabilities have been confirmed yet, but these services will be prioritized for further assessment.
