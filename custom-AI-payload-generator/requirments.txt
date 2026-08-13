@@ -1,0 +1,3 @@
+msfconcole
+mitralai and APi key
+dot-env

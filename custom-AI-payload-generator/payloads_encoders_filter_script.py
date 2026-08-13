@@ -1,4 +1,4 @@
-def filter_payloads(keywords, filepath="msfvenom_payloads_encoders.txt"):
+def filter_payloads(keywords, filepath):
     """
     Reads the saved msfvenom payloads/encoders file and returns
     only the payload lines matching ALL given keywords (e.g. ["windows", "reverse"]).
@@ -15,6 +15,7 @@ def filter_payloads(keywords, filepath="msfvenom_payloads_encoders.txt"):
         if "START AVALIABLE PAYLOADS" in line:
             in_payload_section = True
             continue
+        
         if "END AVALIABLE PAYLOADS" in line:
             in_payload_section = False
             continue
@@ -23,15 +24,15 @@ def filter_payloads(keywords, filepath="msfvenom_payloads_encoders.txt"):
             stripped = line.strip()
             if not stripped:
                 continue
+            
             lowered = stripped.lower()
             if all(keyword in lowered for keyword in keywords):
                 matched_lines.append(stripped)
-
+                
     return matched_lines
 
 
 if __name__ == "__main__":
-    results = filter_payloads(["windows", "reverse"])
-    print(f"Found {len(results)} matching payloads:")
+    results = filter_payloads(["Windows", "Powershell", "Reverse", "Shell"], "custom-AI-payload-generator/msfvenom_payloads_encoders.txt")
     for r in results:
         print(r)

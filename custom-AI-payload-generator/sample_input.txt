@@ -1,0 +1,1 @@
+My own OS is Kali Linux, i need a payload powershell command that when ran on a windows 10 machine can give me back on kali a reverse shell connection.
