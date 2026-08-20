@@ -1,4 +1,4 @@
-# AI Automated PT Tools
+# AI/PYTHON Automated PT Tools
 
 A small collection of Python CLI utilities for **authorized** penetration-testing workflows. The repository currently contains three independent tools: an Nmap summarizer, a session-based Markdown report generator, and an `msfvenom` payload helper. Each tool sends relevant context to Mistral and expects a valid Mistral API key. [1] [2] [3]
 
@@ -22,17 +22,17 @@ AI-Automated-PT-Tools/
 │   └── sample_output.md
 ├── PT-report-AI/
 │   ├── report-AI.py
-│   ├── .report_ai_session         # local session state
-│   ├── .report_ai_summary         # rolling report context
-│   └── test_session_report.md     # sample output
+│   ├── .report_ai_session     
+│   ├── .report_ai_summary        
+│   └── test_session_report.md     
 └── custom-AI-payload-generator/
     ├── main_payloads_AI_generator.py
     ├── payloads_encoders_filter_script.py
-    ├── msfvenom_payloads.txt      # static payload catalogue
-    └── encoders.txt               # static encoder catalogue
+    ├── msfvenom_payloads.txt    
+    └── encoders.txt            
 ```
 
-## Prerequisites
+## Dependencies
 
 Use Python **3.11+** and a Mistral API key. Install Nmap for `narmap-AI`; install the Metasploit Framework for the payload generator. Both `nmap` and, where applicable, `msfvenom` and `msfconsole` must be available on your `PATH`. The repository does not currently pin Python dependencies. [1] [2] [3]
 
