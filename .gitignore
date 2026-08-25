@@ -1,3 +1,10 @@
 ﻿__pycache__/
 *.py[cod]
 *$py.class
+<<<<<<< Updated upstream
+=======
+=======
+.env
+__pycache__
+>>>>>>> ca76ab19a7129f070622beab5026f76be18f1f43
+>>>>>>> Stashed changes
