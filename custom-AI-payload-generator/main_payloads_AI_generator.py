@@ -25,7 +25,7 @@ def call_mistral(system_prompt, user_content):
     try:
         print("AI proccessing request...")
         response = client.chat.complete(
-            model="mistral-large-latest",
+            model="mistral-small-latest",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_content}
