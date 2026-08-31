@@ -1,0 +1,54 @@
+-------------NMAP START----------------
+
+PS C:\Users\Uria Narkisi\Documents\AI_Automated_PT_Tools> nmap -Pn 192.168.7.1
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-08-31 11:06 +0300
+Nmap scan report for 192.168.7.1
+Host is up (0.0070s latency).
+Not shown: 846 closed tcp ports (reset), 150 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+53/tcp  open  domain
+80/tcp  open  http
+443/tcp open  https
+445/tcp open  microsoft-ds
+MAC Address: 88:0F:A2:5C:61:2F (Sagemcom Broadband SAS)
+
+Nmap done: 1 IP address (1 host up) scanned in 3.19 seconds
+PS C:\Users\Uria Narkisi\Documents\AI_Automated_PT_Tools> 
+
+-------------NMAP END----------------
+
+-------------GOBUSTER START--------------
+
+===================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===================================================
+[+] Url:                     http://192.168.1.50
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===================================================
+Starting gobuster in directory enumeration mode
+===================================================
+/admin                (Status: 301) [Size: 178] [--> http://192.168.1.50/admin/]
+/backup               (Status: 200) [Size: 42]
+/config.php.bak       (Status: 200) [Size: 1024]
+/images               (Status: 301) [Size: 178] [--> http://192.168.1.50/images/]
+/login                (Status: 200) [Size: 2456]
+/uploads              (Status: 301) [Size: 178] [--> http://192.168.1.50/uploads/]
+===================================================
+Finished
+===================================================
+
+-------------GOBUSTER END----------------
+
+-------------Ncat START----------------
+
+PS C:\Users\Uria Narkisi\Documents\AI_Automated_PT_Tools> Ncat 192.168.1.7 4444
+Ncat: No connection could be made because the target machine actively refused it. .
+PS C:\Users\Uria Narkisi\Documents\AI_Automated_PT_Tools> 
+
+-------------Ncat END----------------
